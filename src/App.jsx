@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import "./App.css";
 import { useState, useEffect } from "react";
+import Conteudo from "./components/Conteudo";
 
 const Spinner = styled(motion.div)`
   width: 50px;
@@ -29,7 +30,7 @@ function App() {
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
         />):(
-          <h1>Content</h1>
+          <Conteudo visivel={!Carregando}/>
         )
       }
         
